@@ -16,9 +16,12 @@ public class ApiCommand extends HystrixCommand<String> {
         return delegate.probe();
     }
 
+    /**
+     *  how to setup a fallback
+     *  @Override
+     *     protected String getFallback() {
+     *         return delegate.fallback();
+     *     }
+     */
 
-    @Override
-    protected String getFallback() {
-        return delegate.fallback();
-    }
 }
